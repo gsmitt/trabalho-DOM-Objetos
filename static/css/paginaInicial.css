@@ -78,10 +78,15 @@ header {
     0% {
       -webkit-transform: translateX(0);
               transform: translateX(0);
+
+    
     }
     100% {
       -webkit-transform: translateX(60px);
               transform: translateX(60px);
+             
+              
+              
     }
   }
   @keyframes slide-right {
@@ -158,11 +163,9 @@ header {
     }
   }
 
-.title {
-    font-family: 'Bebas Neue', cursive;
-    letter-spacing: 5px;
+.titleLettering {
+    width: 100%;
     font-size: 80px;
-    color: rgb(200, 221, 253);
     position: relative;
     z-index: 2000;
     margin-top: 0px;
@@ -186,16 +189,16 @@ header {
 
 .subtitle {
     font-family: 'Open Sans', sans-serif;
-    margin-top: 0;
+    font-size: 17px;
+    font-weight: 400;
     color: rgb(200, 221, 253);
     position: relative;
     z-index: 2000;
-    margin-top: 0px;
+    margin-top: -60px;
     text-align: center;
     filter: drop-shadow(0px 0px 40px rgba(0, 0, 0, 0.247));
     -webkit-animation: fade-in-fwd 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation: fade-in-fwd 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-
 }
 
 
@@ -205,8 +208,8 @@ header {
     font-size: 13px;
     color: rgb(200, 221, 253);
     background: rgb(56,34,255);
-    background: linear-gradient(38deg, rgb(29, 68, 240) 0%, rgb(56, 199, 255) 100%);
-    padding: 13px 20px 13px 20px;
+    background: linear-gradient(38deg, rgb(110, 29, 240) 0%, rgb(56, 199, 255) 100%);
+    padding: 20px 25px 20px 25px;
     border-radius: 40px;
     position: relative;
     z-index: 2000;
