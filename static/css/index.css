@@ -38,6 +38,7 @@ body{
  }
 
  #criarTurmaButton {
+    font-family: 'Montserrat', sans-serif;
     text-decoration: none;
     width: 130px;
     color: white;

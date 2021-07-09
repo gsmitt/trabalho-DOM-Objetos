@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/normalize.css">
+    <title>Turma</title>
+    <link rel="stylesheet" href="static/css/turma.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700;800;900&family=Raleway:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <header>
+        <h2 class="titleTurma">NOME DA TURMA</h2>
+        <p class="subtitleEscola">Nome da Escola</p>
+        <div class="balls">
+            <div class="ball1"></div>
+            <div class="ball2"></div>
+            <div class="ball3"></div>
+            <div class="ball4"></div>
+            <div class="ball5"></div>
+        </div>
+    </header>
+    
+    <!-- Sessão 1 (A principal)----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <section class="sectionMain">
+    <a href="#" class="editarNomeTurma" onclick="acao()">Editar Nome da Turma</a>
+    <a href="#" class="editarNomeEscola" onclick="acao2()">Editar Nome da Escola</a>
+    
+    <div class="centralizadoraAlunos">
+    <a href="#" class="cadastrarAluno" onclick="acao3()">Cadastrar Aluno</a>
+        <div class="alunosTitle">
+            <h2 class="alunosTitleText">ALUNOS</h2>
+        </div>
+        <div class="tabelaAlunos">
+            <p class="semAlunosCadastrados">Nenhum aluno cadastrado...</p>
+        </div>
+    </div>
+    </section>
+
+
+    <!---Modal's-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    
+    <div class="modalBg">
+        <div class="modalCadastroTurma">
+            <h2 class="modalTitle">Alterar Nome de Turma:</h2>
+            <form class="formModal">
+                <input type="text" placeholder="Novo Nome da Turma" class="modalInputTurma" required/>
+                <input type="submit" class="botaoCadastrarTurma" value="Alterar Nome">
+            </form>
+            <div class="ballModal1"></div>
+            <div class="ballModal2"></div>
+            
+            <a href="#" onclick="fechar()" class="closeButtonModal">X</a>
+        </div>
+    </div>
+
+
+    <div class="modalBg2">
+        <div class="modalCadastroTurma">
+            <h2 class="modalTitle2">Alterar Nome de Escola:</h2>
+            <form class="formModal">
+                <input type="text" placeholder="Novo Nome da Escola" class="modalInputEscola" required/>
+                <input type="submit" class="botaoCadastrarTurma" value="Alterar Nome">
+            </form>
+            <div class="ballModal1"></div>
+            <div class="ballModal2"></div>
+            
+            <a href="#" onclick="fechar2()" class="closeButtonModal">X</a>
+        </div>
+    </div>
+    
+
+    <div class="modalBg3">
+    <div class="modalCadastroTurma">
+        <h2 class="modalTitle3">Cadastro de Aluno:</h2>
+        <form class="formModal">
+            <input type="text" placeholder="Matricula do Aluno" class="matriculaAluno" required/>
+            <input type="text" placeholder="Nome do Aluno" class="nomeAluno" required/>
+            <input type="text" placeholder="Telefone do Aluno" class="telefoneAluno" required/>
+            <input type="text" placeholder="Email do Aluno" class="email Aluno" required/>
+            <input type="submit" class="botaoCadastrarAlunoModal" value="Cadastrar Aluno">
+        </form>
+        <div class="ballModal1"></div>
+        <div class="ballModal2"></div>
+        
+        <a href="#" onclick="fechar3()" class="closeButtonModal">X</a>
+    </div>
+</div>
+
+</body>
+<script src="static/js/turmaModal.js"></script>
+</html>
+</body>
+    <script src="static/js/turmaModal.js"></script>
+</html>
+
