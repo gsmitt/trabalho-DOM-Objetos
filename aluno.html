@@ -4,9 +4,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/normalize.css">
     <title>Aluno</title>
+    <link rel="stylesheet" href="static/css/aluno.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700;800;900&family=Raleway:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <header>
+        <h2 class="headerTitle">NOME DO ALUNO</h2>
+        <p class="headerSubtitle">Matricula do Aluno</p>
+        <div class="ball"></div>
+        <div class="ball2"></div>
+        <div class="ball3"></div>
+    </header>
+
+    <section class="main">
+        <div class="centralizadora">
+            <div class="informacoesAluno">
+                <h3 class="informacoesAlunoTitle">INFORMAÇÕES DO ALUNO</h3>
+                <p class="paragrafoInformacoes">Colocar informaçoes nesse parágrafo</p>
+                <a onclick="acao2()" class="botaoEditarInformacoes">Editar Informações</a>
+            </div>
+
+            <a onclick="acao()" class="botaoCadastrarNotas">Cadastrar Notas</a>
+
+            <div class="notasAluno">
+                <h3 class="informacoesAlunoTitle">NOTAS</h3>
+                <p class="semNotaCadastrada">Não há nenhuma nota cadastrada...</p>
+            </div>
+
+            <a class="botaoCadastrarNotas">Calcular Média</a>
+
+        </div>
+
+        
+        <div class="modalBg">
+            <div class="modalCadastroNotas">
+                <h2 class="modalTitle">Cadastro de Notas:</h2>
+                <form class="formModal">
+                    <input type="text" placeholder="Nota 1" class="nota1" required/>
+                    <input type="text" placeholder="Nota 2" class="nota2" required/>
+                    <input type="text" placeholder="Nota 3" class="nota3" required/>
+                    <input type="submit" class="botaoCadastrarNotasModal" value="Cadastrar Notas">
+                </form>
+                <div class="ballModal1"></div>
+                <div class="ballModal2"></div>
+                
+                <a href="" onclick="fechar()" class="closeButtonModal">X</a>
+            </div>
+            </div>
+
+            <div class="modalBg2">
+                <div class="modalEditarInformacoes">
+                    <h2 class="modalTitle2">Alterar Informaçoes do Aluno:</h2>
+                    <form class="formModal">
+                        <input type="text" placeholder="Matricula do Aluno" class="matriculaAluno" required/>
+                        <input type="text" placeholder="Nome do Aluno" class="nomeAluno" required/>
+                        <input type="text" placeholder="Telefone do Aluno" class="telefoneAluno" required/>
+                        <input type="text" placeholder="Email do Aluno" class="email Aluno" required/>
+                        <input type="submit" class="botaoAlterarInformacoesModal" value="Alterar Informações">
+                    </form>
+                    <div class="ballModal1"></div>
+                    <div class="ballModal2"></div>
+                    
+                    <a href="#" onclick="fechar2()" class="closeButtonModal">X</a>
+                </div>
+    </section>
+
 </body>
+    <script src="static/js/alunoModal.js"></script>
 </html>
