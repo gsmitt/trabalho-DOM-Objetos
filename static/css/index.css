@@ -1,11 +1,21 @@
 
+
 body{
-background-color: #1d1d1d;
+  display: flex;
+  background: rgb(110,53,255);
+  background: linear-gradient(38deg, rgba(110,53,255,1) 0%, rgba(69,191,255,1) 100%);
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
   .section1 {
-    height: 92vh;
-    background: #1d1d1d;
+    height: 99vh;
+    width: 98%;
+    border-radius: 30px;
+    background: rgb(110,53,255);
+    background: linear-gradient(38deg, rgb(18, 0, 63) 0%, rgb(8, 8, 8) 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,15 +38,131 @@ background-color: #1d1d1d;
  }
 
  #criarTurmaButton {
+    font-family: 'Montserrat', sans-serif;
     text-decoration: none;
-    width: 60px;
+    width: 130px;
     color: white;
-    background: rgb(0,156,255);
-    background: linear-gradient(177deg, rgba(0,156,255,1) 0%, rgba(0,240,255,1) 100%);
-    padding: 5px;
-    border-radius: 100px;
+    background: rgb(110,53,255);
+    background: linear-gradient(38deg, rgba(110,53,255,1) 0%, rgba(69,191,255,1) 100%);
+    padding: 15px 10px 15px 10px;
+    border-radius: 30px;
     position: sticky;
     display: flex;
-    box-sizing: border-box;
+    justify-content: center;
+    
  }
 
+.modalCadastroTurma {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-weight: 200;
+  width: 90%;
+  height: 50%;
+  background: rgb(110,53,255);
+  background: linear-gradient(38deg, rgba(110,53,255,1) 0%, rgba(69,191,255,1) 100%);
+  position: absolute;
+  left: 19px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalCadastroTurma p {
+  color: red;
+  font-size: 13px;
+  position: relative;
+  left: -45px;
+}
+
+.modalCadastroTurma input {
+  width: 250px;
+  padding: 10px 5px 10px 5px;
+  border-radius: 30px;
+  border: none;
+}
+
+.modalTitle {
+   position: absolute;
+   top: 23%;
+  z-index: 1000;
+
+}
+
+.modalInputTurma {
+  position: absolute;
+  top: 42%;
+  z-index: 1000;
+}
+
+.modalInputEscola {
+  position: absolute;
+  top: 53%;
+  z-index: 1000;
+}
+
+.modalBg {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.199);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.botaoCadastrarTurma {
+    text-decoration: none;
+    width: 350px;
+    color: white;
+    background: rgb(110,53,255);
+    background: linear-gradient(38deg, rgba(110,53,255,1) 0%, rgba(69,191,255,1) 100%);
+    border-radius: 30px;
+    font-size: 15px;
+    padding: 13px 15px 13px 15px;
+    position: absolute;
+    top: 67%;
+    filter: drop-shadow(1px 1px 30px rgba(0, 0, 0, 0.692));
+    z-index: 1000;
+}
+
+.closeButtonModal {
+    position: absolute;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    top: 20px;
+    left: 300px;
+    z-index: 1000;
+}
+
+.formModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ball1 {
+  width: 200px;
+  height: 200px;
+  border-radius: 900px;
+  position: absolute;
+  top: 0%;
+  right: 5%;
+  background: rgb(110,53,255);
+  background: linear-gradient(38deg, rgba(110, 53, 255, 0.747) 0%, rgba(69,191,255,1) 100%);
+}
+
+.ball2 {
+  width: 200px;
+  height: 200px;
+  border-radius: 900px;
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  background: rgb(110,53,255);
+  background: linear-gradient(38deg, rgba(110, 53, 255, 0.747) 0%, rgba(69,191,255,1) 100%);
+}

@@ -1,0 +1,394 @@
+header {
+    width: 100vw;
+    height: 250px;
+    background: rgb(110,53,255);
+    background: linear-gradient(38deg, rgba(110,53,255,1) 0%, rgba(69,191,255,1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+
+.headerTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    margin-top: 0px;
+    color: white;
+    z-index: 2000;
+    position: absolute;
+}
+
+.headerSubtitle {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    position: absolute;
+    z-index: 1000;
+    top: 15%;
+}
+
+.ball {
+    width: 200px;
+    height: 200px;
+    background: rgb(110,53,255);
+    background: linear-gradient(90deg, rgba(110,53,255,1) 0%, rgba(69,191,255,1) 100%);
+    border-radius: 900px;
+    position: relative;
+    top: -20%;
+    left: 23%;
+    z-index: 1;
+    margin: 0px;
+    -webkit-animation: slide-right4 2.7s ease-in-out infinite alternate-reverse both;
+    animation: slide-right4 2.7s ease-in-out infinite alternate-reverse both;
+}
+
+.ball2 {
+    width: 200px;
+    height: 200px;
+    background: rgb(110,53,255);
+    background: linear-gradient(180deg, rgba(110,53,255,1) 0%, rgba(69,191,255,1) 100%);
+    border-radius: 900px;
+    position: absolute;
+    top: -12%;
+    left: -20%;
+    z-index: 1;
+    -webkit-animation: slide-right3 2.5s ease-in-out infinite alternate-reverse both;
+    animation: slide-right3 2.5s ease-in-out infinite alternate-reverse both;
+}
+
+.ball3 {
+    width: 150px;
+    height: 150px;
+    background: rgb(110,53,255);
+    background: linear-gradient(220deg, rgba(110,53,255,1) 0%, rgba(69,191,255,1) 100%);
+    border-radius: 900px;
+    position: absolute;
+    top: 12%;
+    left: 10%;
+    z-index: 0;
+    -webkit-animation: slide-right2 3s ease-in-out infinite alternate-reverse both;
+    animation: slide-right2 3s ease-in-out infinite alternate-reverse both;
+}
+
+
+
+
+.main {
+    height: 200vh;
+    background: rgb(110,53,255);
+    background: linear-gradient(38deg, rgb(18, 0, 63) 0%, rgb(8, 8, 8) 100%);
+    z-index: 10000;
+}
+
+@-webkit-keyframes slide-right4 {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(40px);
+              transform: translateX(40px);
+    }
+  }
+  @keyframes slide-right4 {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(40px);
+              transform: translateX(40px);
+    }
+  }
+
+  @-webkit-keyframes slide-right3 {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(36px);
+              transform: translateX(36px);
+    }
+  }
+  @keyframes slide-right3 {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(36px);
+              transform: translateX(36px);
+    }
+  }
+
+  @-webkit-keyframes slide-right2 {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(60px);
+              transform: translateX(60px);
+    }
+  }
+  @keyframes slide-right2 {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(60px);
+              transform: translateX(60px);
+    }
+  }
+
+  .centralizadora {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .informacoesAluno {
+      margin-top: 30px;
+      border-radius: 30px;
+      width: 90%;
+      height: 400px;
+      background: rgb(45,45,45);
+      background: linear-gradient(0deg, rgb(31, 31, 31) 0%, rgb(31, 31, 31));
+  }
+
+  .informacoesAlunoTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background: rgb(110,53,255);
+    background: linear-gradient(38deg, rgba(110, 53, 255, 0.747) 0%, rgba(69,191,255,1) 100%);
+    z-index: 2000;
+    position: relative;
+    top: -18px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  .botaoCadastrarNotas {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    position: relative;
+    top: 30px;
+    background: rgb(110,53,255);
+    background: linear-gradient(38deg, rgba(110, 53, 255, 0.747) 0%, rgba(69,191,255,1) 100%);
+    padding: 10px 20px 10px 20px;
+    border-radius: 30px;
+  }
+
+  .modalBg {
+    width: 100vw;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 2000;
+  }
+
+  .modalCadastroNotas {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: 200;
+    width: 90%;
+    height: 50%;
+    background: rgb(110,53,255);
+    background: linear-gradient(38deg, rgba(110,53,255,1) 0%, rgba(69,191,255,1) 100%);
+    position: absolute;
+    left: 19px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: -110%;
+  }
+
+.modalTitle {
+    position: relative;
+    top: -30px;
+    z-index: 1000;
+}
+  
+  .modalCadastroNotas input {
+      z-index: 1000;
+    width: 250px;
+    padding: 10px 5px 10px 5px;
+    border-radius: 30px;
+    border: none;
+    position: relative;
+    top: 0%;
+    margin-bottom: 5px;
+  }
+  
+  .botaoCadastrarNotasModal {
+    text-decoration: none;
+    width: 350px;
+    color: white;
+    background: rgb(110,53,255);
+    background: linear-gradient(38deg, rgba(110,53,255,1) 0%, rgba(69,191,255,1) 100%);
+    border-radius: 30px;
+    font-size: 15px;
+    padding: 13px 15px 13px 15px;
+    position: relative;
+    margin-top: 30px;
+    filter: drop-shadow(1px 1px 30px rgba(0, 0, 0, 0.692));
+    z-index: 1000;
+  }
+
+  .closeButtonModal {
+    position: absolute;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    top: 20px;
+    left: 300px;
+    z-index: 1000;
+}
+
+.formModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ballModal1 {
+  width: 200px;
+  height: 200px;
+  border-radius: 900px;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  background: rgb(110,53,255);
+  background: linear-gradient(38deg, rgba(110, 53, 255, 0.747) 0%, rgba(69,191,255,1) 100%);
+}
+
+.ballModal2 {
+  width: 200px;
+  height: 200px;
+  border-radius: 900px;
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  background: rgb(110,53,255);
+  background: linear-gradient(38deg, rgba(110, 53, 255, 0.747) 0%, rgba(69,191,255,1) 100%);
+}
+
+.notasAluno {
+    margin-top: 65px;
+    border-radius: 30px;
+    width: 90%;
+    height: 400px;
+    background: rgb(45,45,45);
+    background: linear-gradient(0deg, rgb(31, 31, 31) 0%, rgb(31, 31, 31));
+}
+
+.semNotaCadastrada {
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: 100;
+    margin-top: 140px;
+}
+
+.botaoEditarInformacoes {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 12px;
+    background-color: rgb(53, 53, 53);
+    padding: 10px 18px 10px 18px;
+    position: relative;
+    border-radius: 30px;
+    text-align: center;
+    left: 28%;
+    top: 24%;
+}
+
+.paragrafoInformacoes {
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: 100;
+    margin-top: 140px;
+}
+
+.modalEditarInformacoes {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: 200;
+    width: 90%;
+    height: 50%;
+    background: rgb(110,53,255);
+    background: linear-gradient(38deg, rgba(110,53,255,1) 0%, rgba(69,191,255,1) 100%);
+    position: absolute;
+    left: 19px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: -110%;
+}
+
+.modalEditarInformacoes input {
+    z-index: 1000;
+  width: 250px;
+  padding: 10px 5px 10px 5px;
+  border-radius: 30px;
+  border: none;
+  position: relative;
+  top: 0%;
+  margin-bottom: 5px;
+}
+
+.modalBg2 {
+    width: 100vw;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 2000;
+}
+
+.modalTitle2 {
+    z-index: 1000;
+    font-size: 25px;
+    text-align: center;
+}
+
+.botaoAlterarInformacoesModal {
+    text-decoration: none;
+    width: 350px;
+    color: white;
+    background: rgb(110,53,255);
+    background: linear-gradient(38deg, rgba(110,53,255,1) 0%, rgba(69,191,255,1) 100%);
+    border-radius: 30px;
+    font-size: 15px;
+    padding: 13px 15px 13px 15px;
+    position: relative;
+    margin-top: 20px;
+    filter: drop-shadow(1px 1px 30px rgba(0, 0, 0, 0.692));
+    z-index: 1000;
+}

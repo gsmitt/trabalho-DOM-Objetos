@@ -1,0 +1,491 @@
+
+.sectionMain {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(110,53,255);
+    background: linear-gradient(38deg, rgb(18, 0, 63) 0%, rgb(8, 8, 8) 100%);
+    z-index: 2000;
+    position: absolute;
+}
+
+header {
+    width: 100vw;
+    height: 440px;
+    background: rgb(110,53,255);
+    background: linear-gradient(38deg, rgba(110,53,255,1) 0%, rgba(69,191,255,1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleTurma {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    margin-top: 0px;
+    color: white;
+    z-index: 2000;
+    position: absolute;
+}
+
+.subtitleEscola {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    position: absolute;
+    z-index: 1000;
+    top: 27%;
+}
+
+.balls {
+    max-width: 100%;
+}
+.ball1 {
+    max-width: 80%;
+    height: 200px;
+    background: rgb(110,53,255);
+    background: linear-gradient(50deg, rgba(110,53,255,1) 0%, rgba(69,191,255,1) 100%);
+    border-radius: 900px;
+    position: relative;
+    top: 65%;
+    left: 35%;
+    z-index: 1;
+    margin: 0px;
+    -webkit-animation: slide-right4 2.7s ease-in-out infinite alternate-reverse both;
+    animation: slide-right4 2.7s ease-in-out infinite alternate-reverse both;
+}
+
+.ball2 {
+    width: 300px;
+    height: 300px;
+    background: rgb(110,53,255);
+    background: linear-gradient(50deg, rgba(110,53,255,1) 0%, rgba(69,191,255,1) 100%);
+    border-radius: 900px;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    z-index: 0;
+    -webkit-animation: slide-right3 2.5s ease-in-out infinite alternate-reverse both;
+    animation: slide-right3 2.5s ease-in-out infinite alternate-reverse both;
+}
+
+.ball3 {
+    width: 250px;
+    height: 250px;
+    background: rgb(110,53,255);
+    background: linear-gradient(220deg, rgba(110,53,255,1) 0%, rgba(69,191,255,1) 100%);
+    border-radius: 900px;
+    position: relative;
+    top: 15%;
+    left: -50%;
+    z-index: 0;
+    -webkit-animation: slide-right2 3s ease-in-out infinite alternate-reverse both;
+    animation: slide-right2 3s ease-in-out infinite alternate-reverse both;
+}
+
+.ball4 {
+    max-width: 100%;
+    height: 250px;
+    background: rgb(110,53,255);
+    background: linear-gradient(220deg, rgba(110,53,255,1) 0%, rgba(69,191,255,1) 100%);
+    border-radius: 900px;
+    position: relative;
+    top: -60%;
+    left: 45%;
+    z-index: 2;
+    -webkit-animation: slide-right 2s ease-in-out infinite alternate-reverse both;
+    animation: slide-right 2s ease-in-out infinite alternate-reverse both;
+}
+
+.ball5 {
+    width: 230px;
+    height: 230px;
+    background: rgb(110,53,255);
+    background: linear-gradient(220deg, rgba(110,53,255,1) 0%, rgba(69,191,255,1) 100%);
+    border-radius: 900px;
+    position: absolute;
+    top: -18%;
+    left: -24%;
+    z-index: 2;
+    -webkit-animation: slide-right5 3.5s ease-in-out infinite alternate-reverse both;
+    animation: slide-right5 3.5s ease-in-out infinite alternate-reverse both;
+}
+
+@-webkit-keyframes slide-right4 {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(40px);
+              transform: translateX(40px);
+    }
+  }
+  @keyframes slide-right4 {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(40px);
+              transform: translateX(40px);
+    }
+  }
+
+  @-webkit-keyframes slide-right3 {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(36px);
+              transform: translateX(36px);
+    }
+  }
+  @keyframes slide-right3 {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(36px);
+              transform: translateX(36px);
+    }
+  }
+
+  @-webkit-keyframes slide-right2 {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(60px);
+              transform: translateX(60px);
+    }
+  }
+  @keyframes slide-right2 {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(60px);
+              transform: translateX(60px);
+    }
+  }
+
+  @-webkit-keyframes slide-right {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+
+    
+    }
+    100% {
+      -webkit-transform: translateX(60px);
+              transform: translateX(60px);
+             
+              
+              
+    }
+  }
+  @keyframes slide-right {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(60px);
+              transform: translateX(60px);
+    }
+  }
+  
+  @-webkit-keyframes slide-right5 {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(50px);
+              transform: translateX(50px);
+    }
+  }
+  @keyframes slide-right5 {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(50px);
+              transform: translateX(50px);
+    }
+  }
+
+  .editarNomeTurma {
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      color: white;
+      font-size: 12px;
+      background-color: rgb(31, 31, 31);
+      padding: 10px 18px 10px 18px;
+      position: relative;
+      border-radius: 30px;
+      top: 3%;
+      left: 2%;
+  }
+
+  .editarNomeEscola {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 12px;
+    background-color: rgb(31, 31, 31);
+    padding: 10px 18px 10px 18px;
+    position: relative;
+    border-radius: 30px;
+    top: 3%;
+    left: 4%;
+  }
+
+  .modalCadastroTurma {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: 200;
+    width: 90%;
+    height: 50%;
+    background: rgb(110,53,255);
+    background: linear-gradient(38deg, rgba(110,53,255,1) 0%, rgba(69,191,255,1) 100%);
+    position: absolute;
+    left: 19px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: -34%;
+  }
+
+
+  .modalCadastroTurma p {
+    color: red;
+    font-size: 13px;
+    position: relative;
+    left: -45px;
+  }
+  
+  .modalCadastroTurma input {
+    width: 250px;
+    padding: 10px 5px 10px 5px;
+    border-radius: 30px;
+    border: none;
+  }
+  
+  .modalTitle {
+     position: absolute;
+     top: 27%;
+    z-index: 1000;
+    font-size: 20px;
+  
+  }
+  
+  .modalInputTurma {
+    position: absolute;
+    top: 47%;
+    z-index: 1000;
+  }
+  
+  .modalBg {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.199);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 2000;
+  }
+  
+  .botaoCadastrarTurma {
+      text-decoration: none;
+      width: 350px;
+      color: white;
+      background: rgb(110,53,255);
+      background: linear-gradient(38deg, rgba(110,53,255,1) 0%, rgba(69,191,255,1) 100%);
+      border-radius: 30px;
+      font-size: 15px;
+      padding: 13px 15px 13px 15px;
+      position: absolute;
+      top: 67%;
+      filter: drop-shadow(1px 1px 30px rgba(0, 0, 0, 0.692));
+      z-index: 1000;
+  }
+  
+  .closeButtonModal {
+      position: absolute;
+      font-size: 20px;
+      text-decoration: none;
+      color: white;
+      top: 20px;
+      left: 300px;
+      z-index: 1000;
+  }
+  
+  .formModal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .ballModal1 {
+    width: 200px;
+    height: 200px;
+    border-radius: 900px;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    background: rgb(110,53,255);
+    background: linear-gradient(38deg, rgba(110, 53, 255, 0.747) 0%, rgba(69,191,255,1) 100%);
+  }
+  
+  .ballModal2 {
+    width: 200px;
+    height: 200px;
+    border-radius: 900px;
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    background: rgb(110,53,255);
+    background: linear-gradient(38deg, rgba(110, 53, 255, 0.747) 0%, rgba(69,191,255,1) 100%);
+  }
+  
+  .modalBg2 {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.74);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 2000;
+  }
+
+  .modalTitle2 {
+    position: absolute;
+    top: 27%;
+   z-index: 1000;
+   font-size: 20px;
+ 
+ }
+
+ .modalInputEscola {
+    position: absolute;
+    top: 47%;
+    z-index: 1000;
+  }
+
+  .alunosTitle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+      height: 60px;
+      background: rgb(110,53,255);
+      background: linear-gradient(38deg, rgba(110, 53, 255, 0.747) 0%, rgba(69,191,255,1) 100%);
+      z-index: 2000;
+      position: relative;
+      top: 160px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+  }
+
+  .alunosTitleText {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  .centralizadoraAlunos {
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .cadastrarAluno {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    position: relative;
+    top: 90px;
+    background: rgb(110,53,255);
+    background: linear-gradient(38deg, rgba(110, 53, 255, 0.747) 0%, rgba(69,191,255,1) 100%);
+    padding: 10px 20px 10px 20px;
+    border-radius: 30px;
+  }
+
+  .tabelaAlunos {
+      width: 90%;
+      height: 200px;
+      background: rgb(45,45,45);
+    background: linear-gradient(0deg, rgb(31, 31, 31) 0%, rgb(31, 31, 31));
+      position: relative;
+      top: 160px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+  }
+
+  .semAlunosCadastrados {
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: 100;
+    margin-top: 80px;
+  }
+
+  .modalBg3 {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.74);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 2000;
+  }
+
+  .modalTitle3 {
+    position: absolute;
+    top: 10%;
+   z-index: 3000;
+   font-size: 20px;
+ 
+ }
+
+ .modalBg3 input {
+     z-index: 3000;
+     margin-bottom: 10px;
+ }
+
+ .botaoCadastrarAlunoModal{
+    text-decoration: none;
+    width: 350px;
+    color: white;
+    background: rgb(110,53,255);
+    background: linear-gradient(38deg, rgba(110,53,255,1) 0%, rgba(69,191,255,1) 100%);
+    border-radius: 30px;
+    font-size: 15px;
+    padding: 13px 15px 13px 15px;
+    position: absolute;
+    top: 77%;
+    filter: drop-shadow(1px 1px 30px rgba(0, 0, 0, 0.692));
+    z-index: 1000;
+ }
+ 

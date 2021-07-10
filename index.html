@@ -21,11 +21,27 @@
     <section class="section1">
         <div class="noContent">
             <p class="nenhumaNota">Nenhuma turma cadastrada...</p>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" id="criarTurmaButton" class="bi bi-plus" viewBox="0 0 16 16">
-            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+            <a href="#modalCadastroTurma" onclick="acao()" id="criarTurmaButton">Criar Turma</a>
               </svg>
         </div>
     </section>
    
+    <div class="modalBg">
+        <div class="modalCadastroTurma">
+            <h2 class="modalTitle">Cadastro de Turma:</h2>
+            <form class="formModal">
+                <input type="text" placeholder="Nome da Turma" class="modalInputTurma" required/>
+                <input type="text" placeholder="Nome da Escola" class= "modalInputEscola" required/>
+                <input type="submit" class="botaoCadastrarTurma" value="Cadastrar Turma">
+            </form>
+            <div class="ball1"></div>
+            <div class="ball2"></div>
+            
+            <a href="#" onclick="fechar()" class="closeButtonModal">X</a>
+        </div>
+    </div>
+
+    
 </body>
+    <script src="static/js/index.js"></script>
 </html>
