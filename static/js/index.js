@@ -28,6 +28,7 @@ function prepara(){
     if (turmas[0]){
         let naoTem = document.querySelector(".nenhumaNota"),
         sect = document.querySelector(".turmas")
+        console.log(naoTem)
         naoTem.style.display = "none"
         imprimeTurmas(sect)
     }
