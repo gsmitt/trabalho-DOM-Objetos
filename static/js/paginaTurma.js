@@ -40,12 +40,20 @@ window.onload = () =>{
     subm3 = document.querySelector(".botaoCadastrarAlunoModal")
 
     subm1.addEventListener("click",() => {
-        let nome = document.querySelector(".modalInputTurma").value,
-        campo = document.querySelector(".campo1")
-        if(!nome){
-            campo.innerHTML = "Campo não preenchido"
-        }
+        let nome = document.querySelector(".modalInputTurma").value
         mudaTurma(atual.codigoTurma, nome ,atual.codigoTurma)
+    })
+
+    subm2.addEventListener("click",() => {
+        let codigo = document.querySelector(".modalInputEscola").value,
+        campo = document.querySelector(".campo2")
+        if (pegaTurma(codigo)){
+            campo.innerHTML = "Código já existe"
+        }
+        else{
+            campo.innerHTML = ""
+            mudaTurma(atual.codigoTurma, atual.nomeTurma, codigo)
+        }
     })
 
 }
