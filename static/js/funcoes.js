@@ -11,7 +11,6 @@ let pseudoTurmas = JSON.parse(localStorage.getItem("turmas")),
 turmas = []
 
 for(let i of pseudoTurmas){
-    let alunos = []
     turmas.push(new Turma(i.codigoTurma, i.nomeTurma, i.alunos))
 }
 
@@ -46,14 +45,19 @@ function salvarTurma(turma){
     }
     turmas = JSON.parse(localStorage.getItem("turmas"))
 
-    for(let i of turmas){
-        if (i.codigoTurma == novaTurma.codigoTurma){
-            return false
+    if(turmas.length < 10){
+        for(let i of turmas){
+            if (i.codigoTurma == novaTurma.codigoTurma){
+                return false
+            }
         }
+        turmas.push(novaTurma)
+        localStorage.setItem("turmas",JSON.stringify(turmas))
+        return true
     }
-    turmas.push(novaTurma)
-    localStorage.setItem("turmas",JSON.stringify(turmas))
-    return true
+    else{
+        alert("Limite de turmas atingido")
+    }
 }
 
 function mudaTurma(codigoTurma, novoNome, novoCodigo){
@@ -62,7 +66,16 @@ function mudaTurma(codigoTurma, novoNome, novoCodigo){
         if (i.codigoTurma == codigoTurma){
             i.codigoTurma = novoCodigo
             i.nomeTurma = novoNome
+            sessionStorage.setItem("turma", novoCodigo)
+            localStorage.setItem("turmas",JSON.stringify(turmas))
         }
     }
-    localStorage.setItem("turmas",JSON.stringify(turmas))
+}
+
+function salvaAluno(){
+        let novaTurma = {
+        codigoTurma: turma.codigoTurma,
+        nomeTurma: turma.nomeTurma,
+        alunos: turma.alunos
+    }
 }

@@ -32,11 +32,11 @@
     <!-- Sessão 1 (A principal)----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
     <section class="sectionMain">
-    <a href="#" class="editarNomeTurma">Editar Nome da Turma</a>
-    <a href="#" class="editarNomeEscola">Editar Código da Turma</a>
+    <a href="#editarCodigo" class="editarNomeTurma">Editar Nome da Turma</a>
+    <a href="#editarNome" class="editarNomeEscola">Editar Código da Turma</a>
     
     <div class="centralizadoraAlunos">
-    <a href="#" class="cadastrarAluno">Cadastrar Aluno</a>
+    <a href="#cadastrarAluno" class="cadastrarAluno">Cadastrar Aluno</a>
         <div class="alunosTitle">
             <h2 class="alunosTitleText">ALUNOS</h2>
         </div>
@@ -53,7 +53,7 @@
         <div class="modalCadastroTurma">
             <h2 class="modalTitle">Alterar Nome de Turma:</h2>
             <form class="formModal">
-                <input type="text" placeholder="Novo Nome da Turma" class="modalInputTurma" required/>
+                <input type="text" placeholder="Novo Nome da Turma" class="modalInputTurma"/>
                 <p class="campo1"></p>
                 <input type="submit" class="botaoCadastrarTurma" value="Alterar Nome">
             </form>
@@ -69,7 +69,8 @@
         <div class="modalCadastroTurma">
             <h2 class="modalTitle2">Alterar Código da Turma:</h2>
             <form class="formModal">
-                <input type="text" placeholder="Novo Código da Turma" class="modalInputEscola" required/>
+                <input type="text" placeholder="Novo Código da Turma" class="modalInputEscola" />
+                <p class="campo2"></p>
                 <input type="submit" class="botaoCadastrarTurma" value="Alterar Código">
             </form>
             <div class="ballModal1"></div>
@@ -81,21 +82,25 @@
     
 
     <div class="modalBg3">
-    <div class="modalCadastroTurma">
-        <h2 class="modalTitle3">Cadastro de Aluno:</h2>
-        <form class="formModal">
-            <input type="text" placeholder="Matricula do Aluno" class="matriculaAluno" required/>
-            <input type="text" placeholder="Nome do Aluno" class="nomeAluno" required/>
-            <input type="text" placeholder="Telefone do Aluno" class="telefoneAluno" required/>
-            <input type="text" placeholder="Email do Aluno" class="email Aluno" required/>
-            <input type="submit" class="botaoCadastrarAlunoModal" value="Cadastrar Aluno">
-        </form>
-        <div class="ballModal1"></div>
-        <div class="ballModal2"></div>
-        
-        <a href="#" class="closeButtonModal">X</a>
+        <div class="modalCadastroTurma">
+            <h2 class="modalTitle3">Cadastro de Aluno:</h2>
+            <form class="formModal">
+                <input type="text" placeholder="Matricula do Aluno" class="matriculaAluno" required/>
+                <p class="campo3"></p>
+                <input type="text" placeholder="Nome do Aluno" class="nomeAluno" required/>
+                <p class="campo4"></p>
+                <input type="text" placeholder="Telefone do Aluno" class="telefoneAluno" required/>
+                <p class="campo5"></p>
+                <input type="text" placeholder="Email do Aluno" class="emailAluno" required/>
+                <p class="campo6"></p>
+                <input type="submit" class="botaoCadastrarAlunoModal" value="Cadastrar Aluno">
+            </form>
+            <div class="ballModal1"></div>
+            <div class="ballModal2"></div>
+            
+            <a href="#" class="closeButtonModal">X</a>
+        </div>
     </div>
-</div>
 
 </body>
     <script type="module">

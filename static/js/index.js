@@ -28,8 +28,9 @@ function prepara(){
     if (turmas[0]){
         let naoTem = document.querySelector(".nenhumaNota"),
         sect = document.querySelector(".turmas")
-        console.log(naoTem)
-        naoTem.style.display = "none"
+        if (naoTem){
+            naoTem.style.display = "none"
+        }
         imprimeTurmas(sect)
     }
 }
@@ -92,6 +93,7 @@ function submit()  {
     }
     else{
         pnome.textContent = " ";
+        pcodigo.textContent = " ";
         let novaTurma = new Turma(codigo.value,nome.value)
         let x = salvarTurma(novaTurma)
         prepara()
