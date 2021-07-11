@@ -1,6 +1,12 @@
-
-
-
+// Import/Export
+import { Aluno } from "./alunos.js";
+import {pegaAlunos} from "./funcoes.js";
+// Eventos
+window.onload = () => {
+    let matricula = sessionStorage.getItem("aluno"),
+    turma = sessionStorage.getItem("turma"),
+    aluno = pegaAlunos(turma, matricula)
+}
 // Modal
 function acao() {
     let modal = document.querySelector(".modalBg")

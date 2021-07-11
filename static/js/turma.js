@@ -19,7 +19,7 @@ export class Turma{
 
     cadastrarAluno(aluno){
         for(let i in this.#alunos){
-            if(this.#alunos[i].matriculaAluno == aluno.matriculaAluno){
+            if(this.#alunos[i].matricula == aluno.matricula){
                 return false
             }
         }

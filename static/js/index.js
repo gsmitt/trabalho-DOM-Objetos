@@ -38,19 +38,19 @@ function prepara(){
 
 function imprimeTurmas(sect){
     sect.innerHTML = ""
-    for(let i of turmas){
+    for(let turma of turmas){
         let div = document.createElement("div"),
         nome = document.createElement("h2"),
         codigo = document.createElement("p")
         div.classList.add("itemTurma")
         
         div.addEventListener("click",() => {
-            sessionStorage.setItem("turma", i.codigoTurma)
+            sessionStorage.setItem("turma", turma.codigoTurma)
             window.location.href = "../../turma.html"
         })
 
-        nome.textContent = i.nomeTurma
-        codigo.textContent = i.codigoTurma
+        nome.textContent = turma.nomeTurma
+        codigo.textContent = turma.codigoTurma
         div.appendChild(nome)
         div.appendChild(codigo)
         sect.appendChild(div)
