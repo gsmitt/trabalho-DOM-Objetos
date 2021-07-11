@@ -94,12 +94,14 @@ body{
   position: absolute;
   top: 42%;
   z-index: 1000;
+  outline: none;
 }
 
 .modalInputEscola {
   position: absolute;
   top: 53%;
   z-index: 1000;
+  outline: none;
 }
 
 .modalBg {
@@ -165,4 +167,11 @@ body{
   left: 0%;
   background: rgb(110,53,255);
   background: linear-gradient(38deg, rgba(110, 53, 255, 0.747) 0%, rgba(69,191,255,1) 100%);
+}
+
+.pNome {
+  display: none;
+}
+.pCodigo {
+  display: none;
 }

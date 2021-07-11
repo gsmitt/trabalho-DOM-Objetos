@@ -21,27 +21,34 @@
     <section class="section1">
         <div class="noContent">
             <p class="nenhumaNota">Nenhuma turma cadastrada...</p>
-            <a href="#modalCadastroTurma" onclick="acao()" id="criarTurmaButton">Criar Turma</a>
+            <a href="#modalCadastroTurma" id="criarTurmaButton">Criar Turma</a>
               </svg>
         </div>
+    </section>
+    <section class="section2">
+        
     </section>
    
     <div class="modalBg">
         <div class="modalCadastroTurma">
             <h2 class="modalTitle">Cadastro de Turma:</h2>
             <form class="formModal">
-                <input type="text" placeholder="Nome da Turma" class="modalInputTurma" required/>
-                <input type="text" placeholder="Nome da Escola" class= "modalInputEscola" required/>
+                <input type="text" placeholder="Nome da Turma" class="modalInputTurma"/>
+                <p class="pNome"></p>
+                <input type="text" placeholder="Código da Turma" class= "modalInputEscola"/>
+                <p class="pCodigo"></p>
                 <input type="submit" class="botaoCadastrarTurma" value="Cadastrar Turma">
             </form>
             <div class="ball1"></div>
             <div class="ball2"></div>
             
-            <a href="#" onclick="fechar()" class="closeButtonModal">X</a>
+            <a href="#" class="closeButtonModal">X</a>
         </div>
     </div>
 
     
 </body>
-    <script src="static/js/index.js"></script>
+    <script type="module" src="./static/js/index.js">
+        import {acao, fechar, submit} from "./static/js/index.js"
+    </script>
 </html>
