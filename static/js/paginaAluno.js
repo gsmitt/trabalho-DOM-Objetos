@@ -1,3 +1,7 @@
+
+
+
+// Modal
 function acao() {
     let modal = document.querySelector(".modalBg")
 

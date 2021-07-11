@@ -93,6 +93,7 @@ function submit()  {
     }
     else{
         pnome.textContent = " ";
+        pcodigo.textContent = " ";
         let novaTurma = new Turma(codigo.value,nome.value)
         let x = salvarTurma(novaTurma)
         prepara()
