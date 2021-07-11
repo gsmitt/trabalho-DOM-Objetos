@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&family=Raleway:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700;800;900&family=Raleway:wght@700&display=swap" rel="stylesheet">
    
 
 </head>
@@ -20,12 +20,11 @@
 
     <section class="section1">
         <div class="noContent">
-            <p class="nenhumaNota">Nenhuma turma cadastrada...</p>
             <a href="#modalCadastroTurma" id="criarTurmaButton">Criar Turma</a>
               </svg>
         </div>
         <div class="turmas">
-
+            <p class="nenhumaNota">Nenhuma turma cadastrada...</p>
         </div>
     </section>
    
@@ -33,9 +32,9 @@
         <div class="modalCadastroTurma">
             <h2 class="modalTitle">Cadastro de Turma:</h2>
             <form class="formModal">
-                <input type="text" placeholder="Nome da Turma" class="modalInputTurma"/>
+                <input type="text" placeholder="Nome da Turma" class="modalInputTurma" required/>
                 <p class="pNome"></p>
-                <input type="text" placeholder="Código da Turma" class= "modalInputEscola"/>
+                <input type="text" placeholder="Código da Turma" class= "modalInputEscola" required/>
                 <p class="pCodigo"></p>
                 <input type="submit" class="botaoCadastrarTurma" value="Cadastrar Turma">
             </form>
