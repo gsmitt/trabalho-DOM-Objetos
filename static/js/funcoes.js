@@ -11,7 +11,6 @@ let pseudoTurmas = JSON.parse(localStorage.getItem("turmas")),
 turmas = []
 
 for(let i of pseudoTurmas){
-    let alunos = []
     turmas.push(new Turma(i.codigoTurma, i.nomeTurma, i.alunos))
 }
 
@@ -62,7 +61,8 @@ function mudaTurma(codigoTurma, novoNome, novoCodigo){
         if (i.codigoTurma == codigoTurma){
             i.codigoTurma = novoCodigo
             i.nomeTurma = novoNome
+            sessionStorage.setItem("turma", novoCodigo)
+            localStorage.setItem("turmas",JSON.stringify(turmas))
         }
     }
-    localStorage.setItem("turmas",JSON.stringify(turmas))
 }
