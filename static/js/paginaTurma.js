@@ -1,5 +1,5 @@
 //Export/Import
-import {turmas, pegaTurma, salvarTurma} from "./funcoes.js";
+import {turmas, pegaTurma, salvarTurma, mudaTurma} from "./funcoes.js";
 export {acao,fechar,acao2,acao3}
 
 //Prepara a página
@@ -39,7 +39,14 @@ window.onload = () =>{
     subm2 = document.querySelector(".modalBg2 .botaoCadastrarTurma"),
     subm3 = document.querySelector(".botaoCadastrarAlunoModal")
 
-    //subm1.addEventListener("click",() => //Criar uma Function Muda Turma{})
+    subm1.addEventListener("click",() => {
+        let nome = document.querySelector(".modalInputTurma").value,
+        campo = document.querySelector(".campo1")
+        if(!nome){
+            campo.innerHTML = "Campo não preenchido"
+        }
+        mudaTurma(atual.codigoTurma, nome ,atual.codigoTurma)
+    })
 
 }
 

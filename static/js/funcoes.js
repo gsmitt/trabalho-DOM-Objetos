@@ -1,6 +1,6 @@
 // Import/Export
 import {Turma} from "./turma.js"
-export {turmas, pegaAlunos, pegaTurma, salvarTurma}
+export {turmas, pegaAlunos, pegaTurma, salvarTurma, mudaTurma}
 
 // Preopara os dados/storage
 if (!localStorage.getItem("turmas")){
@@ -55,4 +55,14 @@ function salvarTurma(turma){
     localStorage.setItem("turmas",JSON.stringify(turmas))
     return true
 }
-// Criar a function muda Turma aqui
+
+function mudaTurma(codigoTurma, novoNome, novoCodigo){
+    let turmas = JSON.parse(localStorage.getItem("turmas"))
+    for (let i of turmas){
+        if (i.codigoTurma == codigoTurma){
+            i.codigoTurma = novoCodigo
+            i.nomeTurma = novoNome
+        }
+    }
+    localStorage.setItem("turmas",JSON.stringify(turmas))
+}

@@ -27,7 +27,7 @@ window.onload = () =>{
 function prepara(){
     if (turmas[0]){
         let naoTem = document.querySelector(".nenhumaNota"),
-        sect = document.querySelector(".section2")
+        sect = document.querySelector(".turmas")
         naoTem.style.display = "none"
         imprimeTurmas(sect)
     }
@@ -40,6 +40,7 @@ function imprimeTurmas(sect){
         let div = document.createElement("div"),
         nome = document.createElement("h2"),
         codigo = document.createElement("p")
+        div.classList.add("itemTurma")
         
         div.addEventListener("click",() => {
             sessionStorage.setItem("turma", i.codigoTurma)
