@@ -2,9 +2,10 @@ export class Turma{
     #alunos = []
     #codigoTurma
     #nomeTurma
-    constructor(codigoTurma, nomeTurma){
+    constructor(codigoTurma, nomeTurma, alunos = []){
         this.#codigoTurma = codigoTurma
         this.#nomeTurma = nomeTurma
+        this.#alunos = alunos
     }
     get codigoTurma(){
         return this.#codigoTurma

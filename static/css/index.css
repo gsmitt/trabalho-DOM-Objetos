@@ -18,11 +18,10 @@ body{
     background: linear-gradient(38deg, rgb(18, 0, 63) 0%, rgb(8, 8, 8) 100%);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 
   .noContent {
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,6 +34,8 @@ body{
    font-weight: 100;
    text-align: center;
    margin-top: 0;
+   position: absolute;
+   top: 50%;
  }
 
  #criarTurmaButton {
@@ -94,12 +95,14 @@ body{
   position: absolute;
   top: 42%;
   z-index: 1000;
+  outline: none;
 }
 
 .modalInputEscola {
   position: absolute;
   top: 53%;
   z-index: 1000;
+  outline: none;
 }
 
 .modalBg {
@@ -165,4 +168,46 @@ body{
   left: 0%;
   background: rgb(110,53,255);
   background: linear-gradient(38deg, rgba(110, 53, 255, 0.747) 0%, rgba(69,191,255,1) 100%);
+}
+
+.pNome {
+  display: none;
+}
+.pCodigo {
+  display: none;
+}
+
+.itemTurma {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  width: 90%;
+  margin-top: 30px;
+  border-radius: 20px;
+  background: rgb(110,53,255);
+  background: linear-gradient(38deg, rgba(110, 53, 255, 0.747) 0%, rgba(69,191,255,1) 100%);
+}
+
+.itemTurma h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-weight: 800;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+.itemTurma p {
+  margin-left: 30px;
+  margin-top: 0px;
+}
+
+.turmas {
+  width: 100vw;
+  height: 88vh;
+  padding-top: 100px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: auto;
 }

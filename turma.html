@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700;800;900&family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 
@@ -17,7 +18,8 @@
 
     <header>
         <h2 class="titleTurma">NOME DA TURMA</h2>
-        <p class="subtitleEscola">Nome da Escola</p>
+        <p class="subtitleEscola">Codigo da Turma</p>
+        <span class="material-icons" id="lixeirinha">delete</span>
         <div class="balls">
             <div class="ball1"></div>
             <div class="ball2"></div>
@@ -30,11 +32,11 @@
     <!-- Sessão 1 (A principal)----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
     <section class="sectionMain">
-    <a href="#" class="editarNomeTurma" onclick="acao()">Editar Nome da Turma</a>
-    <a href="#" class="editarNomeEscola" onclick="acao2()">Editar Nome da Escola</a>
+    <a href="#" class="editarNomeTurma">Editar Nome da Turma</a>
+    <a href="#" class="editarNomeEscola">Editar Código da Turma</a>
     
     <div class="centralizadoraAlunos">
-    <a href="#" class="cadastrarAluno" onclick="acao3()">Cadastrar Aluno</a>
+    <a href="#" class="cadastrarAluno">Cadastrar Aluno</a>
         <div class="alunosTitle">
             <h2 class="alunosTitleText">ALUNOS</h2>
         </div>
@@ -52,27 +54,28 @@
             <h2 class="modalTitle">Alterar Nome de Turma:</h2>
             <form class="formModal">
                 <input type="text" placeholder="Novo Nome da Turma" class="modalInputTurma" required/>
+                <p class="campo1"></p>
                 <input type="submit" class="botaoCadastrarTurma" value="Alterar Nome">
             </form>
             <div class="ballModal1"></div>
             <div class="ballModal2"></div>
             
-            <a href="#" onclick="fechar()" class="closeButtonModal">X</a>
+            <a href="#" class="closeButtonModal">X</a>
         </div>
     </div>
 
 
     <div class="modalBg2">
         <div class="modalCadastroTurma">
-            <h2 class="modalTitle2">Alterar Nome de Escola:</h2>
+            <h2 class="modalTitle2">Alterar Código da Turma:</h2>
             <form class="formModal">
-                <input type="text" placeholder="Novo Nome da Escola" class="modalInputEscola" required/>
-                <input type="submit" class="botaoCadastrarTurma" value="Alterar Nome">
+                <input type="text" placeholder="Novo Código da Turma" class="modalInputEscola" required/>
+                <input type="submit" class="botaoCadastrarTurma" value="Alterar Código">
             </form>
             <div class="ballModal1"></div>
             <div class="ballModal2"></div>
             
-            <a href="#" onclick="fechar2()" class="closeButtonModal">X</a>
+            <a href="#" class="closeButtonModal">X</a>
         </div>
     </div>
     
@@ -90,14 +93,12 @@
         <div class="ballModal1"></div>
         <div class="ballModal2"></div>
         
-        <a href="#" onclick="fechar3()" class="closeButtonModal">X</a>
+        <a href="#" class="closeButtonModal">X</a>
     </div>
 </div>
 
 </body>
-<script src="static/js/turmaModal.js"></script>
+    <script type="module">
+        import {acao,fechar,acao2,acao3} from "./static/js/paginaTurma.js"
+    </script>
 </html>
-</body>
-    <script src="static/js/turmaModal.js"></script>
-</html>
-
