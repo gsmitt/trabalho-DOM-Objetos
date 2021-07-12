@@ -24,18 +24,22 @@
         <div class="centralizadora">
             <div class="informacoesAluno">
                 <h3 class="informacoesAlunoTitle">INFORMAÇÕES DO ALUNO</h3>
-                <p class="paragrafoInformacoes">Colocar informaçoes nesse parágrafo</p>
-                <a onclick="acao2()" class="botaoEditarInformacoes">Editar Informações</a>
+                <p class="paragrafoName"><strong>Nome: </strong></p>
+                <p class="paragrafoRegistration"><strong>Matricula: </strong></p>
+                <p class="paragrafoPhone"><strong>Telefone: </strong></p>
+                <p class="paragrafoEmail"><strong>Email: </strong></p>
+
+                <a class="botaoEditarInformacoes">Editar Informações</a>
             </div>
 
-            <a onclick="acao()" class="botaoCadastrarNotas">Cadastrar Notas</a>
+            <a class="botaoCadastrarNotas">Cadastrar Notas</a>
 
             <div class="notasAluno">
                 <h3 class="informacoesAlunoTitle">NOTAS</h3>
                 <p class="semNotaCadastrada">Não há nenhuma nota cadastrada...</p>
             </div>
 
-            <a class="botaoCadastrarNotas">Calcular Média</a>
+            <a class="botaoCadastrarNotas botaoMedia">Calcular Média</a>
 
         </div>
 
@@ -52,7 +56,7 @@
                 <div class="ballModal1"></div>
                 <div class="ballModal2"></div>
                 
-                <a href="" onclick="fechar()" class="closeButtonModal">X</a>
+                <a href="" class="closeButtonModal">X</a>
             </div>
             </div>
 
@@ -60,19 +64,19 @@
                 <div class="modalEditarInformacoes">
                     <h2 class="modalTitle2">Alterar Informaçoes do Aluno:</h2>
                     <form class="formModal">
-                        <input type="text" placeholder="Matricula do Aluno" class="matriculaAluno" required/>
-                        <input type="text" placeholder="Nome do Aluno" class="nomeAluno" required/>
-                        <input type="text" placeholder="Telefone do Aluno" class="telefoneAluno" required/>
-                        <input type="text" placeholder="Email do Aluno" class="email Aluno" required/>
+                        <input type="text" placeholder="Matricula do Aluno" class="matriculaAluno">
+                        <input type="text" placeholder="Nome do Aluno" class="nomeAluno">
+                        <input type="text" placeholder="Telefone do Aluno" class="telefoneAluno">
+                        <input type="text" placeholder="Email do Aluno" class="emailAluno">
                         <input type="submit" class="botaoAlterarInformacoesModal" value="Alterar Informações">
                     </form>
                     <div class="ballModal1"></div>
                     <div class="ballModal2"></div>
                     
-                    <a href="#" onclick="fechar2()" class="closeButtonModal">X</a>
+                    <a href="#" class="closeButtonModal">X</a>
                 </div>
     </section>
 
 </body>
-    <script src="static/js/alunoModal.js"></script>
+    <script type="module" src="./static/js/paginaAluno.js"></script>
 </html>

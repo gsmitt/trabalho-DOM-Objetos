@@ -5,6 +5,10 @@ export class Aluno{
     #telefone
     #email
     #media
+
+    get notas(){
+        return this.#notas
+    }
     get matricula(){
         return this.#matricula
     }
@@ -21,11 +25,12 @@ export class Aluno{
         return this.#media
     }
 
-    constructor(matricula, nome, telefone, email){
+    constructor(matricula, nome, telefone, email, notas = []){
         this.#matricula = matricula
         this.#nome = nome
         this.#telefone = telefone
         this.#email = email
+        this.#notas = notas
     }
     editarInformacoes(nome, telefone, email){
         this.#nome = nome
