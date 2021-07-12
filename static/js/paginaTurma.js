@@ -1,9 +1,10 @@
 //Export/Import
 import {Aluno} from "./alunos.js";
-import {turmas, pegaTurma, salvarTurma, mudaTurma} from "./funcoes.js";
+import {turmas, pegaTurma, salvarTurma, mudaTurma, salvaAluno} from "./funcoes.js";
 export {acao,fechar,acao2,acao3}
 
 //Prepara a página
+let atual
 window.onload = () =>{ 
     let turma = sessionStorage.getItem("turma"),
     editaT = document.querySelector(".editarNomeTurma"),
@@ -12,6 +13,7 @@ window.onload = () =>{
     fecha = document.querySelectorAll(".closeButtonModal"),
     titulo = document.querySelector(".titleTurma"),
     subt = document.querySelector(".subtitleEscola")
+    
 
     editaT.addEventListener("click", () => {
         acao()
@@ -31,7 +33,8 @@ window.onload = () =>{
         })
     }
 
-    let atual = pegaTurma(turma)
+    
+    atual = pegaTurma(turma)
     titulo.innerHTML = atual.nomeTurma
     subt.innerHTML = atual.codigoTurma
 
@@ -40,16 +43,22 @@ window.onload = () =>{
     subm2 = document.querySelector(".modalBg2 .botaoCadastrarTurma"),
     subm3 = document.querySelector(".botaoCadastrarAlunoModal")
 
-    subm1.addEventListener("click", () => {
-        let nome = document.querySelector(".modalInputTurma").value
-        if(!codigo){
+    subm1.addEventListener("click", (event) => {
+        event.preventDefault()
+        let nome = document.querySelector(".modalInputTurma").value,
+        campo = document.querySelector(".campo1")
+        if(!nome){
             campo.innerHTML = "Campo vazio"
         }
-        else{mudaTurma(atual.codigoTurma, nome ,atual.codigoTurma)}
-        
+        else{
+            campo.innerHTML = ""
+            mudaTurma(atual.codigoTurma, nome ,atual.codigoTurma)
+            location.reload()
+        }
     })
 
-    subm2.addEventListener("click",() => {
+    subm2.addEventListener("click", (event) => {
+        event.preventDefault()
         let codigo = document.querySelector(".modalInputEscola").value,
         campo = document.querySelector(".campo2")
         if(!codigo){
@@ -62,14 +71,18 @@ window.onload = () =>{
             else{
                 campo.innerHTML = ""
                 mudaTurma(atual.codigoTurma, atual.nomeTurma, codigo)
+                location.reload()
             }
         }
     })
 
-    subm3.addEventListener("click", () => {
-        
+    subm3.addEventListener("click", (event) => {
+        event.preventDefault()
+        submit()
     })
 
+
+    prepara()
 }
 
 //Modal's de alterar nome
@@ -105,7 +118,7 @@ function submit()  {
     let nome = document.querySelector(".nomeAluno"),
     matricula = document.querySelector(".matriculaAluno"),
     tele = document.querySelector(".telefoneAluno"),
-    email = document.querySelector(".emailAluno").
+    email = document.querySelector(".emailAluno"),
     pnome = document.querySelector(".campo4"),
     pmat = document.querySelector(".campo3"),
     ptele = document.querySelector(".campo5"),
@@ -146,14 +159,46 @@ function submit()  {
         ptele.textContent = " ";
         pemail.textContent = " ";
         let novoAluno = new Aluno(matricula.value, nome.value, tele.value, email.value)
-        atual.alunos.push(novoAluno)
-        console.log(atual)
-        prepara()
-        if (!x){
-            pcodigo.textContent = "Este código já existe";
+        if (!novoAluno){
+            pmat.textContent = "Esta matricula já existe";
         }
         else{
-            fechar()
+            if(atual.cadastrarAluno(novoAluno)){
+                salvaAluno(novoAluno, atual.codigoTurma)
+                location.reload()
+            }
         }
+    }
+}
+// imprimindo alunos
+function prepara(){
+    if (atual.alunos[0]){
+        let semAlunos = document.querySelector(".semAlunosCadastrados"),
+        sect = document.querySelector(".tabelaAlunos")
+        if(semAlunos){
+            semAlunos.style.display = "none"
+        }
+        imprimeAlunos(sect)
+    }
+}
+
+function imprimeAlunos(sect){
+    sect.innerHTML = ""
+    for (let aluno of atual.alunos){
+        let div = document.createElement("div"),
+        nome = document.createElement("h3"),
+        matricula = document.createElement("p")
+        div.classList.add("itemAluno")
+        
+        div.addEventListener("click",() => {
+            sessionStorage.setItem("aluno", aluno.matricula)
+            window.location.href = "../../aluno.html"
+        })
+
+        nome.textContent = aluno.nome
+        matricula.textContent = aluno.matricula
+        div.appendChild(nome)
+        div.appendChild(matricula)
+        sect.appendChild(div)
     }
 }
