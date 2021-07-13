@@ -74,7 +74,7 @@ header {
 
 
 .main {
-    height: 200vh;
+    height: 120vh;
     background: rgb(110,53,255);
     background: linear-gradient(38deg, rgb(18, 0, 63) 0%, rgb(8, 8, 8) 100%);
     z-index: 10000;
@@ -218,7 +218,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    top: -110%;
+    top: -120%;
   }
 
 .modalTitle {
@@ -321,7 +321,7 @@ header {
     border-radius: 30px;
     text-align: center;
     left: 28%;
-    top: 24%;
+    top: 20px;
 }
 
 .paragrafoInformacoes {
@@ -348,7 +348,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    top: -110%;
+    top: -120%;
 }
 
 .modalEditarInformacoes input {
@@ -393,3 +393,49 @@ header {
     filter: drop-shadow(1px 1px 30px rgba(0, 0, 0, 0.692));
     z-index: 1000;
 }
+
+#lixeirinha {
+  position: absolute;
+  z-index: 2000;
+  color: white;
+  top: 20px;
+  right: 15px;
+  font-size: 30px;
+}
+
+#setinhaBack {
+  position: absolute;
+  z-index: 2000;
+  color: white;
+  top: 20px;
+  left: 15px;
+  font-size: 40px;
+ }
+
+.informacoesAluno {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+.informacoesAluno p {
+  margin-bottom: 30px;
+  margin-top: 35px;
+  font-size: 16px;
+  margin-left: 30px;
+}
+
+.listaGrades {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-size: 16px;
+  margin-left: 30px;
+  margin-top: 45px;
+}
+
+.listaGrades p {
+  margin-bottom: 40px;
+}
+
+ input {
+  outline: none;
+ }
