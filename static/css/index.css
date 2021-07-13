@@ -11,7 +11,8 @@ body{
 }
 
   .section1 {
-    height: 99vh;
+    height: fit-content;
+    min-height: 99vh;
     width: 98%;
     border-radius: 30px;
     background: rgb(110,53,255);

@@ -1,6 +1,6 @@
 // Import/Export
 import {Turma} from "./turma.js"
-export {turmas, pegaAlunos, pegaTurma, salvarTurma, mudaTurma, salvaAluno}
+export {turmas, mudaAluno, pegaAlunos, pegaTurma, salvarTurma, mudaTurma, salvaAluno}
 
 // Preopara os dados/storage
 if (!localStorage.getItem("turmas")){
@@ -27,8 +27,8 @@ function pegaTurma(codigoTurma){
 
 // Encontra aluno pela matrícula
 function pegaAlunos(codigoTurma, matricula){
-    turmas = pegaTurma(codigoTurma)
-    for(let aluno of turma){
+    let turma = pegaTurma(codigoTurma)
+    for(let aluno of turma.alunos){
         if (aluno.matricula == matricula){
             return aluno
         }
@@ -52,11 +52,13 @@ function salvarTurma(turma){
             }
         }
         turmas.push(novaTurma)
+
         localStorage.setItem("turmas",JSON.stringify(turmas))
         return true
     }
     else{
-        alert("Limite de turmas atingido")
+        alert("Limite de turmas atingido!")
+        prompt("Para liberar mais turmas, assine a versão premium!\nInsira o número do cartão:")
     }
 }
 
@@ -86,5 +88,24 @@ function salvaAluno(aluno, turma){
         }
         i.alunos.push(novoAluno)
         localStorage.setItem("turmas",JSON.stringify(turmas))
+    }
+}
+
+function mudaAluno(codigoTurma, matricula, nNome, nMat, nTel, nEmail){
+    let turmas = JSON.parse(localStorage.getItem("turmas"))
+    for (let i of turmas){
+        if (i.codigoTurma == codigoTurma){
+            for(let j of i.alunos){
+                if(j.matricula == matricula){
+                    if (nMat != ""){j.matricula = nMat}
+                    if (nNome != ""){j.nome = nNome}
+                    if (nTel != ""){j.telefone = nTel}
+                    if (nEmail != ""){j.email = nEmail}
+                    
+                    sessionStorage.setItem("aluno", j.matricula)
+                    localStorage.setItem("turmas",JSON.stringify(turmas))
+                }
+            }
+        }
     }
 }

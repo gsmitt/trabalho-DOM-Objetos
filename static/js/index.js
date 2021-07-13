@@ -43,7 +43,6 @@ function imprimeTurmas(sect){
         nome = document.createElement("h2"),
         codigo = document.createElement("p")
         div.classList.add("itemTurma")
-        
         div.addEventListener("click",() => {
             sessionStorage.setItem("turma", turma.codigoTurma)
             window.location.href = "../../turma.html"
@@ -54,6 +53,7 @@ function imprimeTurmas(sect){
         div.appendChild(nome)
         div.appendChild(codigo)
         sect.appendChild(div)
+        
     }
 }
 
