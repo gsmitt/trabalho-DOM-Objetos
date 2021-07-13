@@ -83,7 +83,8 @@ function salvaAluno(aluno, turma){
             matricula: aluno.matricula,
             nome: aluno.nome,
             telefone: aluno.telefone,
-            email: aluno.email
+            email: aluno.email,
+            notas: []
             }
         }
         i.alunos.push(novoAluno)
@@ -91,7 +92,7 @@ function salvaAluno(aluno, turma){
     }
 }
 
-function mudaAluno(codigoTurma, matricula, nNome, nMat, nTel, nEmail){
+function mudaAluno(codigoTurma, matricula, nNome, nMat, nTel, nEmail, nNotas){
     let turmas = JSON.parse(localStorage.getItem("turmas"))
     for (let i of turmas){
         if (i.codigoTurma == codigoTurma){
@@ -101,6 +102,9 @@ function mudaAluno(codigoTurma, matricula, nNome, nMat, nTel, nEmail){
                     if (nNome != ""){j.nome = nNome}
                     if (nTel != ""){j.telefone = nTel}
                     if (nEmail != ""){j.email = nEmail}
+                    if (!isNaN(nNotas[0])){j.notas[0] = +nNotas[0]}
+                    if (!isNaN(nNotas[1])){j.notas[1] = +nNotas[1]}
+                    if (!isNaN(nNotas[2])){j.notas[2] = +nNotas[2]}
                     
                     sessionStorage.setItem("aluno", j.matricula)
                     localStorage.setItem("turmas",JSON.stringify(turmas))

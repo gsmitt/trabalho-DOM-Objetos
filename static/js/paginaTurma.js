@@ -12,7 +12,9 @@ window.onload = () =>{
     cadastra = document.querySelector(".cadastrarAluno"),
     fecha = document.querySelectorAll(".closeButtonModal"),
     titulo = document.querySelector(".titleTurma"),
-    subt = document.querySelector(".subtitleEscola")
+    subt = document.querySelector(".subtitleEscola"),
+    lixeirinha = document.querySelector("#lixeirinha"),
+    setinha = document.querySelector("#setinhaBack")
     
 
     editaT.addEventListener("click", () => {
@@ -32,6 +34,12 @@ window.onload = () =>{
             fechar()
         })
     }
+    lixeirinha.addEventListener("click", () => {
+        deletaTurma(turma)
+    })
+    setinha.addEventListener("click", () => {
+        window.location.href= "./index.html"
+    })
 
     
     atual = pegaTurma(turma)
@@ -183,7 +191,6 @@ function prepara(){
 }
 
 function imprimeAlunos(sect){
-    sect.innerHTML = ""
     for (let aluno of atual.alunos){
         let div = document.createElement("div"),
         nome = document.createElement("h3"),
@@ -200,5 +207,16 @@ function imprimeAlunos(sect){
         div.appendChild(nome)
         div.appendChild(matricula)
         sect.appendChild(div)
+    }
+}
+
+function deletaTurma(codigoTurma){
+    let turmas = JSON.parse(localStorage.getItem("turmas"))
+    for (let i of turmas){
+        if (i.codigoTurma == codigoTurma){
+            turmas.splice(i,1)
+            localStorage.setItem("turmas",JSON.stringify(turmas))
+            window.location.href = "./index.html"
+        }
     }
 }
