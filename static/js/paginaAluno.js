@@ -1,7 +1,7 @@
 // Import/Export
+// @ts-check
 import { Aluno } from "./alunos.js";
 import {pegaAlunos, mudaAluno, pegaTurma} from "./funcoes.js";
-import { Turma } from "./turma.js";
 export {acao, fechar, acao2}
 // Eventos
 window.onload = () => {
@@ -10,7 +10,6 @@ window.onload = () => {
     aluno = pegaAlunos(turma, matricula),
     editar = document.querySelector(".botaoEditarInformacoes"),
     cadastrar = document.querySelector(".botaoCadastrarNotas"),
-    calcular = document.querySelector(".botaoMedia"),
     fecha = document.querySelectorAll(".closeButtonModal"),
     titulo = document.querySelector(".headerTitle"),
     subt = document.querySelector(".headerSubtitle"),
@@ -65,19 +64,27 @@ window.onload = () => {
 
     subm1.addEventListener("click", (event) => {
         event.preventDefault()
+        //@ts-ignore
         let nom = document.querySelector(".nomeAluno").value,
+        //@ts-ignore
         matr = document.querySelector(".matriculaAluno").value,
+        //@ts-ignore
         tele = document.querySelector(".telefoneAluno").value,
+        //@ts-ignore
         ema = document.querySelector(".emailAluno").value
         if (turmaAtual.cadastrarAluno(new Aluno(matr, nom, tele, ema))){
+            //@ts-ignore
             mudaAluno(turma, matricula, nom, matr, tele, ema, "")
             location.reload()
         }
     })
     subm2.addEventListener("click", (event) => {
         event.preventDefault()
+        //@ts-ignore
         let n1 = document.querySelector(".nota1").value,
+        //@ts-ignore
         n2 = document.querySelector(".nota2").value,
+        //@ts-ignore
         n3 = document.querySelector(".nota3").value,
         notas = [n1,n2,n3]
 
@@ -89,28 +96,42 @@ window.onload = () => {
     verificaNotas(aluno)
 }
 // Modal
+/**
+ * @returns {void}
+ */
 function acao() {
     let modal = document.querySelector(".modalBg")
-
+    //@ts-ignore
     modal.style.display = 'flex';
 }
-
+/**
+ * @returns {void}
+ */
 function fechar() {
     let modal = [document.querySelector(".modalBg"), document.querySelector(".modalBg2")]
 
     for(let i of modal){
+        //@ts-ignore
         i.style.display = 'none';
     }
 }
-
+/**
+ * @returns {void}
+ */
 function acao2() {
     let modal = document.querySelector(".modalBg2")
-
+    //@ts-ignore
     modal.style.display = 'flex';
 }
 
 //Preparando
+/**
+ * 
+ * @param {object} aluno 
+ * @returns {void}
+ */
 function verificaNotas(aluno){
+    
     let n1,n2,n3
     if(aluno.notas[0]){
         n1 = true
@@ -123,11 +144,19 @@ function verificaNotas(aluno){
     }
     if (n1 == true || n2 == true || n3 == true){
         let nada = document.querySelector(".semNotaCadastrada")
+        //@ts-ignore
         nada.style.display = "none"
         imprimeNotas(aluno, n1, n2, n3)
     }
 }
-
+/**
+ * 
+ * @param {object} aluno 
+ * @param {boolean} n1 
+ * @param {boolean} n2 
+ * @param {boolean} n3 
+ * @returns {void}
+ */
 function imprimeNotas(aluno, n1, n2, n3){
     let container = document.querySelector(".notasAluno"),
     div = document.createElement("div"),
@@ -150,6 +179,13 @@ function imprimeNotas(aluno, n1, n2, n3){
     container.appendChild(div)
 }
 
+
+/**
+ * 
+ * @param {string} codigoTurma 
+ * @param {string} matricula 
+ * @returns {void}
+ */
 function deleteAluno(codigoTurma,matricula){
     let turmas = JSON.parse(localStorage.getItem("turmas"))
     for (let i of turmas){

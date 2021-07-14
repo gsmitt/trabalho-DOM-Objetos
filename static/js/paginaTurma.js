@@ -1,6 +1,6 @@
 //Export/Import
 import {Aluno} from "./alunos.js";
-import {turmas, pegaTurma, salvarTurma, mudaTurma, salvaAluno} from "./funcoes.js";
+import {pegaTurma, mudaTurma, salvaAluno} from "./funcoes.js";
 export {acao,fechar,acao2,acao3}
 
 //Prepara a página
@@ -94,13 +94,17 @@ window.onload = () =>{
 }
 
 //Modal's de alterar nome
-
+/**
+ * @returns {void}
+ */
 function acao() {
     let modal = document.querySelector(".modalBg")
 
     modal.style.display = 'flex';
 }
-
+/**
+ * @returns {void}
+ */
 function fechar() {
     let modal = [document.querySelector(".modalBg"), document.querySelector(".modalBg2"), document.querySelector(".modalBg3")]
     for (let i of modal){
@@ -108,20 +112,26 @@ function fechar() {
         }
     
 }
-
+/**
+ * @returns {void}
+ */
 function acao2() {
     let modal = document.querySelector(".modalBg2")
 
     modal.style.display = 'flex';
 }
 
-
+/**
+ * @returns {void}
+ */
 function acao3() {
     let modal = document.querySelector(".modalBg3")
 
     modal.style.display = 'flex';
 }
-
+/**
+ * @returns {void}
+ */
 function submit()  {
     let nome = document.querySelector(".nomeAluno"),
     matricula = document.querySelector(".matriculaAluno"),
@@ -133,7 +143,6 @@ function submit()  {
     pemail = document.querySelector(".campo6")
 
     if (!nome.value || !matricula.value || !tele.value || !email.value){
-        console.log("oi")
         if (!nome.value){
             pnome.textContent = "Campo não preenchido";
         }
@@ -179,6 +188,9 @@ function submit()  {
     }
 }
 // imprimindo alunos
+/**
+ * @returns {void}
+ */
 function prepara(){
     if (atual.alunos[0]){
         let semAlunos = document.querySelector(".semAlunosCadastrados"),
@@ -189,7 +201,11 @@ function prepara(){
         imprimeAlunos(sect)
     }
 }
-
+/**
+ * 
+ * @param {Element} sect 
+ * @returns {void}
+ */
 function imprimeAlunos(sect){
     for (let aluno of atual.alunos){
         let div = document.createElement("div"),
@@ -209,7 +225,11 @@ function imprimeAlunos(sect){
         sect.appendChild(div)
     }
 }
-
+/**
+ * 
+ * @param {string} codigoTurma
+ * @returns {void} 
+ */
 function deletaTurma(codigoTurma){
     let turmas = JSON.parse(localStorage.getItem("turmas"))
     for (let i of turmas){

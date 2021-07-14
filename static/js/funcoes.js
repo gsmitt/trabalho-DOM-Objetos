@@ -6,7 +6,9 @@ export {turmas, mudaAluno, pegaAlunos, pegaTurma, salvarTurma, mudaTurma, salvaA
 if (!localStorage.getItem("turmas")){
     localStorage.setItem("turmas", "[]")
 }
-
+/**
+ * @type {Array[object]}
+ */
 let pseudoTurmas = JSON.parse(localStorage.getItem("turmas")),
 turmas = []
 
@@ -15,7 +17,11 @@ for(let i of pseudoTurmas){
 }
 
 // Encontra turma pelo codigo
-
+/**
+ * 
+ * @param {string} codigoTurma - Código da Turma
+ * @returns {object}
+ */
 function pegaTurma(codigoTurma){
     for(let turma of turmas){
         if(turma.codigoTurma == codigoTurma){
@@ -26,6 +32,12 @@ function pegaTurma(codigoTurma){
 }
 
 // Encontra aluno pela matrícula
+/**
+ * 
+ * @param {string} codigoTurma - Código da Turma
+ * @param {string} matricula - Matrícula do aluno
+ * @returns {object}
+ */
 function pegaAlunos(codigoTurma, matricula){
     let turma = pegaTurma(codigoTurma)
     for(let aluno of turma.alunos){
@@ -37,6 +49,11 @@ function pegaAlunos(codigoTurma, matricula){
 }
 
 // Salva a turma no local storage
+/**
+ * 
+ * @param {object} turma - Objeto do tipo Turma
+ * @returns {boolean}
+ */
 function salvarTurma(turma){
     let novaTurma = {
         codigoTurma: turma.codigoTurma,
@@ -61,7 +78,13 @@ function salvarTurma(turma){
         prompt("Para liberar mais turmas, assine a versão premium!\nInsira o número do cartão:")
     }
 }
-
+/**
+ * 
+ * @param {string} codigoTurma - Código da turma
+ * @param {string} novoNome - Novo nome da turma
+ * @param {string} novoCodigo - Novo código da turma
+ * @returns {void}
+ */
 function mudaTurma(codigoTurma, novoNome, novoCodigo){
     let turmas = JSON.parse(localStorage.getItem("turmas"))
     for (let i of turmas){
@@ -73,7 +96,12 @@ function mudaTurma(codigoTurma, novoNome, novoCodigo){
         }
     }
 }
-
+/**
+ * 
+ * @param {object} aluno - Objeto do tipo Aluno
+ * @param {string} turma - Código da turma
+ * @returns {boolean}
+ */
 function salvaAluno(aluno, turma){
     let turmas = JSON.parse(localStorage.getItem("turmas"))
     for (let i of turmas){
@@ -91,7 +119,17 @@ function salvaAluno(aluno, turma){
         localStorage.setItem("turmas",JSON.stringify(turmas))
     }
 }
-
+/**
+ * 
+ * @param {string} codigoTurma - Código da turma
+ * @param {string} matricula - Matricula do aluno
+ * @param {string} nNome - novo nome do aluno
+ * @param {string} nMat - nova matricula do aluno
+ * @param {string} nTel - novo telefone do aluno
+ * @param {string} nEmail - novo emaiil do aluno
+ * @param {Array} nNotas - novas notas  do aluno
+ * @returns {void}
+ */
 function mudaAluno(codigoTurma, matricula, nNome, nMat, nTel, nEmail, nNotas){
     let turmas = JSON.parse(localStorage.getItem("turmas"))
     for (let i of turmas){
