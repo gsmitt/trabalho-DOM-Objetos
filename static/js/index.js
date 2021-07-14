@@ -1,4 +1,5 @@
 // Imports/Exports
+// @ts-check
 import {turmas, salvarTurma} from "./funcoes.js";
 import {Turma} from "./turma.js";
 export {acao, fechar, submit}
@@ -24,18 +25,25 @@ window.onload = () =>{
     prepara()
 }
 
+/**
+ * @returns {void}
+ */
 function prepara(){
     if (turmas[0]){
         let naoTem = document.querySelector(".nenhumaNota"),
         sect = document.querySelector(".turmas")
         if (naoTem){
+            // @ts-ignore
             naoTem.style.display = "none"
         }
         imprimeTurmas(sect)
     }
 }
 
-
+/**
+ * @param {Element} sect 
+ * @returns {void}
+ */
 function imprimeTurmas(sect){
     sect.innerHTML = ""
     for(let turma of turmas){
@@ -59,31 +67,44 @@ function imprimeTurmas(sect){
 
 
 // Modal
+/**
+ * @returns {void}
+ */
+
 function acao() {
     let modal = document.querySelector(".modalBg")
-
+    // @ts-ignore
     modal.style.display = 'flex';
 }
 
+/**
+ * @returns {void}
+ */
 function fechar() {
     let modal = document.querySelector(".modalBg")
-
+    // @ts-ignore
     modal.style.display = 'none';
 }
+
+/**
+ * @returns {void}
+ */
 
 function submit()  {
     let nome = document.querySelector(".modalInputTurma"),
     codigo = document.querySelector(".modalInputEscola"),
     pnome = document.querySelector(".pNome"),
     pcodigo = document.querySelector(".pCodigo")
-
+    // @ts-ignore
     if (!nome.value || !codigo.value){
+        // @ts-ignore
         if (!nome.value){
             pnome.textContent = "Campo não preenchido";
         }
         else{
             pnome.textContent = " ";
         }
+        // @ts-ignore
         if (!codigo.value){
             pcodigo.textContent = "Campo não preenchido";
         }
@@ -94,7 +115,11 @@ function submit()  {
     else{
         pnome.textContent = " ";
         pcodigo.textContent = " ";
+        // @ts-ignore
         let novaTurma = new Turma(codigo.value,nome.value)
+        /**
+         * @type {boolean}
+         */
         let x = salvarTurma(novaTurma)
         prepara()
         if (!x){
